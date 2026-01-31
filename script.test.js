@@ -1,4 +1,4 @@
-import { capitalize, reverseStr, calculator } from './script.js';
+import { capitalize, reverseStr, calculator, caesarCipher } from './script.js';
 
 test('capitalize first letter of string', () => {
     expect(capitalize('word')).toBe('Word');
@@ -22,4 +22,20 @@ test('multiplies two numbers', () => {
 
 test('divides two numbers', () => {
     expect(calculator.divide(10, 2)).toBe(5);
+});
+
+test('shifts letters by the given factor', () => {
+    expect(caesarCipher('abc', 1)).toBe('bcd');
+});
+
+test('wraps from z to a', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+});
+
+test('preserves letter case', () => {
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+});
+
+test('ignores punctuation and spaces', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
