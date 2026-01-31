@@ -13,15 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/MikeBuckets2/testing-practice/issues"
   },
   "homepage": "https://github.com/MikeBuckets2/testing-practice#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.28.6",
     "jest": "^30.2.0"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.28.6"
   }
 }
