@@ -1,4 +1,4 @@
-import { capitalize, reverseStr, calculator, caesarCipher } from './script.js';
+import { capitalize, reverseStr, calculator, caesarCipher, analyzeArray } from './script.js';
 
 test('capitalize first letter of string', () => {
     expect(capitalize('word')).toBe('Word');
@@ -38,4 +38,13 @@ test('preserves letter case', () => {
 
 test('ignores punctuation and spaces', () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
+
+test('analyzes an array of numbers', () => {
+    expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6,
+    });
 });

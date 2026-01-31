@@ -9,16 +9,16 @@ export function reverseStr(str) {
 export const calculator = {
     add(a, b) {
         return a + b;
-  },
+    },
     subtract(a, b) {
         return a - b;
-  },
+    },
     multiply(a, b) {
         return a * b;
-  },
+    },
     divide(a, b) {
         return a / b;
-  },
+    },
 };
 
 export function caesarCipher(string, shift) {
@@ -36,4 +36,15 @@ export function caesarCipher(string, shift) {
         return String.fromCharCode(code);
         })
         .join('');
+};
+
+export function analyzeArray(array) {
+    const sum = array.reduce((a, b) => a + b, 0);
+
+    return {
+        average: sum / array.length,
+        min: Math.min(...array),
+        max: Math.max(...array),
+        length: array.length,
+    };
 };
